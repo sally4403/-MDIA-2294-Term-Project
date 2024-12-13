@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/contact_style.css">
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+   <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/asset/logo_white 1.svg" alt="Logo">
+            <span>Simple Clinic</span>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+            <img src="/asset/ham-menu.svg">
+        </button>
+        <ul id="nav-links" class="nav-links">
+            <li class="nav-item"><a href="/html/index.html">Home</a></li>
+                <li class="nav-item"><a href="/html/about.html">About</a></li>
+                <li class="nav-item"><a href="/html/services.html">Services</a></li>
+                <li class="nav-item"><a href="#">Team</a></li>
+                <li class="nav-item"><a href="#">Testimonials</a></li>
+                <li class="nav-item"><a href="/html/contact.html">Contact</a></li>
+        </ul>
+        <button class="cta-button" onclick="location.href='#'">Book Appointment</button>
+        <button id="close-menu" class="close-menu"><img src="/asset/close.svg"></button>
+    </nav>
+</header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                <div class="error-message" id="name-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <div class="error-message" id="email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                <div class="error-message" id="message-error"></div>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <div class="logo">
+                <img src="/asset/logo_white 1.svg" alt="Logo">
+                <span>Simple Clinic</span>
+            </div>
+            <br>
+            <p>1234 Street, City</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@example.com</p>
+        </div>
+
+        <div class="footer-cta">
+            <h3>Book Your Appointment Today!</h3>
+            <br>
+            <button class="cta-button" onclick="location.href='#'">Book Appointment</button>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form validation -->
+    <script src="/js/script.js"></script>
+</body>
+</html>

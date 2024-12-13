@@ -1,0 +1,369 @@
+/* Services Page */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+    color: #050B20;
+    position: relative;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    /* margin-right: 8rem; */
+}
+
+.navbar .nav-links li {
+    margin: 0 1rem;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #050B20;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #003478;
+}
+
+.navbar .cta-button {
+    padding: 0.5rem 1rem;
+    background-color: #003478;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar .cta-button:hover {
+    background-color: #003478;
+}
+
+/* Hamburger Button */
+.hamburger-menu {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    transform: translateX(400px);
+    flex-direction: row; 
+    margin: 0;
+    padding: 0;
+    transition: 0.3s ease;
+}
+
+
+.nav-links.active {
+    transform: none;
+
+}
+
+.nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+
+
+.close-menu {
+    display: none;
+}
+
+
+/* Hero Section */
+.services-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
+    background-color: #f4f4f4;
+    flex-direction: column;
+}
+
+
+.services-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    text-align: center
+}
+
+.services-hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.lightbox-gallery {
+    text-align: center;
+    padding: 6rem 2rem;
+    /* background-color: #f9f9f9; */
+}
+
+.lightbox-gallery h2 {
+    font-size: 2.5rem;
+    color: #003478;
+    margin-bottom: 3rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    max-width: 100%; 
+    margin: 0 auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+.gallery a {
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery a:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #151515;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.footer-info {
+    grid-column: span 3;
+}
+
+.footer-cta {
+    grid-column: span 1;
+    text-align: center;
+}
+
+.footer-info .logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-info .logo img {
+    height: 40px;
+    margin-right: 16px;
+}
+
+
+footer ul {
+    margin-bottom: 100px;
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .cta-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #003478;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 834px) {
+    .nav-links {
+        display: none
+    }
+
+    .cta-button {
+        display: none; 
+    }
+
+    .logo {
+        display: flex;
+    }
+
+
+   
+    .nav-links {
+        padding: 10%;
+        background-color: white;
+        flex-direction: column;
+        right: 0;
+        z-index: 10;
+        position: absolute;
+        gap: 2rem;
+        top: 50px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        background: none;
+        border: none;
+        padding: 0;
+        z-index: 20;
+    }
+
+    .close-menu .active {
+        position: absolute;
+        top: 20px;
+        right: 36px;
+        color: rgb(24, 24, 24);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close-menu {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .close-menu img {
+        width: 30px;
+        
+    }
+
+    
+    .cta-button {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); 
+        margin-left: 1rem; 
+        margin-right: 1rem;
+    }
+    
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-cta {
+        text-align: center;
+    }
+
+    .footer-cta h3 {
+        font-size: 1rem;
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .footer-cta button {
+        margin-top: 10px;
+        display: inline-block; 
+    }
+}
+
+
+@media (max-width: 375px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        padding: 5%;
+        background-color: white;
+        flex-direction: column;
+        right: 0;
+        z-index: 10;
+        position: absolute;
+        gap: 2rem;
+        top: 50px;
+    }
+    .hero {
+        display: grid;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        max-width: 400px;
+        margin-left: 1rem;
+    }
+    
+    .hero p {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        max-width: 600px;
+        margin-left: 1rem;
+    }
+ 
+    .gallery {
+        grid-template-columns: 1fr; 
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+}
+@media (min-width: 1440px) {
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-cta {
+        text-align: right;
+    }
+
+}
